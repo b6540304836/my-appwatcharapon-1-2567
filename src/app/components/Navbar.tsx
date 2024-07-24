@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div>
       <div className="flex justify-center ">
-        <div className="self-center top-0 w-full max-w-9xl shadow-lg p-3 mb-5 bg-body rounded ">
+        <div className="self-center top-0 w-full max-w-9xl shadow-lg p-3 mb-5 bg-body rounded bg-slate-200">
           <div className="flex justify-between items-center text-gray-700">
             {/* <div className="mx-2 my-4 ">
              <ion-icon name="logo-pwa" className="text-5xl text-blue-600 hover:text-stone-600"></ion-icon>
@@ -32,10 +32,10 @@ export default function Navbar() {
                 <a href="/evaluation">การประเมินนโยบายสาธารณะ</a>
               </li>
               <li className="text-blue-600 hover:text-white hover:bg-blue-600 mx-4 my-1 border-2 border-blue-600 px-2 rounded-2xl ">
-                <a href="#">ติดต่อ</a>
+                <a href="/contact">ติดต่อ</a>
               </li>
               <li className="text-white bg-blue-600 px-2 rounded-2xl mx-4 my-1 hover:bg-white hover:text-blue-600 hover:border-2 hover:border-blue-600">
-                <a href="#">login</a>
+                <a href="/signin">login</a>
               </li>
               <li className="text-white bg-blue-600 px-2 rounded-2xl mx-4 my-1 hover:bg-white hover:text-blue-600 hover:border-2 hover:border-blue-600">
                 <a href="#">SignUp</a>
