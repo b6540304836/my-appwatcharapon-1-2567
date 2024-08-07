@@ -4,7 +4,7 @@ import Evaluation from "../components/Evaluation";
 export default function page() {
   return (
     <div>
-      <Evaluation/>
+      <Evaluation />
     </div>
   );
 }

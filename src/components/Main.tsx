@@ -3,7 +3,6 @@ import React from "react";
 export default function Main() {
   return (
     <div>
-      
       <div className="flex justify-center ">
         <div className="flex flex-col justify-center items-center bg-slate-100 max-w-7xl">
           <div className="text-3xl text-green-600 font-bold mt-4 ">

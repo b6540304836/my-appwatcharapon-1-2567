@@ -3,7 +3,6 @@ import React from "react";
 export default function Evaluation() {
   return (
     <div>
-      
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
