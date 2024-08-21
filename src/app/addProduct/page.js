@@ -6,9 +6,17 @@ import { useRouter } from "next/navigation";
 
 export default function AddProduct() {
   const [name, setName] = useState("");
-  const [image, setImage] = useState("");
-  const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
+  const [Project, setProject] = useState("");
+  const [imprementation, setImprementation] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [Budget, setBudget] = useState("");
+  const [year, setYear] = useState("");
+  const [evaluation, setEvaluation] = useState("");
+  const [weak, setWeak] = useState("");
+  const [stregth, setStregth] = useState("");
+  const [devalopment, setDevalopment] = useState("");
+  const [suggestion, setSuggestion] = useState("");
 
   const router = useRouter();
 
@@ -62,12 +70,6 @@ export default function AddProduct() {
       type="text"
       placeholder="Product Name"
     />
-        {/* type="text"
-        name="first-name"
-        id="first-name"
-        autoComplete="given-name"
-        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-     */}
     </div>
   </div>
   <div className="sm:col-span-3">
@@ -79,19 +81,13 @@ export default function AddProduct() {
     </label>
     <div className="mt-2">
     <input
-          onChange={(e) => setImage(e.target.value)}
-          value={image}
+          onChange={(e) => setProject(e.target.value)}
+          value={Project}
           className="input input-bordered input-accent w-full max-w-xs"
           type="text"
           placeholder="/images/1.jpg"
           defaultValue="/images/1.jpg"
         />
-        {/* type="text"
-        name="first-name"
-        id="first-name"
-        autoComplete="given-name"
-        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-     */}
     </div>
   </div>
   <div className="sm:col-span-3">
@@ -103,12 +99,11 @@ export default function AddProduct() {
     </label>
     <div className="mt-2">
     <input
-          onChange={(e) => setPrice(e.target.value)}
-          value={price}
+          onChange={(e) => setImprementation(e.target.value)}
+          value={imprementation}
           className="input input-bordered input-accent w-full max-w-xs"
-          type="number"
-          placeholder="1"
-          defaultValue="1"
+          type="text"
+          placeholder="หน่วยงานที่นำนโยบายไปปฏิบัติ"
         />
     </div>
   </div>
@@ -121,11 +116,11 @@ export default function AddProduct() {
     </label>
     <div className="mt-2">
     <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
           className="input input-bordered input-accent w-full max-w-xs"
           type="text"
-          placeholder="Product Category"
+          placeholder="อีเมล"
         />
       
         
@@ -140,11 +135,11 @@ export default function AddProduct() {
     </label>
     <div className="mt-2">
     <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
+          onChange={(e) => setMobile(e.target.value)}
+          value={mobile}
           className="input input-bordered input-accent w-full max-w-xs"
           type="text"
-          placeholder="Product Category"
+          placeholder="โทรศัพท์"
         />
       
         
@@ -159,11 +154,11 @@ export default function AddProduct() {
     </label>
     <div className="mt-2">
     <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
+          onChange={(e) => setBudget(e.target.value)}
+          value={Budget}
           className="input input-bordered input-accent w-full max-w-xs"
-          type="text"
-          placeholder="Product Category"
+          type="number"
+          placeholder="งบประมาณ"
         />
       
     </div>
@@ -177,14 +172,12 @@ export default function AddProduct() {
     </label>
     <div className="mt-2">
     <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
+          onChange={(e) => setYear(e.target.value)}
+          value={year}
           className="input input-bordered input-accent w-full max-w-xs"
-          type="text"
-          placeholder="Product Category"
+          type="number"
+          placeholder="ปีงบประมาณ"
         />
-      
-        
     </div>
   </div>
   <div className="sm:col-span-3">
@@ -196,28 +189,11 @@ export default function AddProduct() {
     </label>
     <div className="mt-2">
     <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
+          onChange={(e) => setEvaluation(e.target.value)}
+          value={evaluation}
           className="input input-bordered input-accent w-full max-w-xs"
-          type="text"
-          placeholder="Product Category"
-        />
-    </div>
-  </div>
-  <div className="sm:col-span-3">
-    <label
-      htmlFor="last-name"
-      className="block text-sm font-medium leading-6 text-gray-900"
-    >
-      จุดเเข็ง
-    </label>
-    <div className="mt-2">
-    <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
-          className="input input-bordered input-accent w-full max-w-xs"
-          type="text"
-          placeholder="Product Category"
+          type="float"
+          placeholder="ผลการประเมิน"
         />
     </div>
   </div>
@@ -230,11 +206,28 @@ export default function AddProduct() {
     </label>
     <div className="mt-2">
     <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
+          onChange={(e) => setWeak(e.target.value)}
+          value={weak}
           className="input input-bordered input-accent w-full max-w-xs"
           type="text"
-          placeholder="Product Category"
+          placeholder="จุดอ่อน"
+        />
+    </div>
+  </div>
+  <div className="sm:col-span-3">
+    <label
+      htmlFor="last-name"
+      className="block text-sm font-medium leading-6 text-gray-900"
+    >
+      จุดเเข็ง
+    </label>
+    <div className="mt-2">
+    <input
+          onChange={(e) => setStregth(e.target.value)}
+          value={stregth}
+          className="input input-bordered input-accent w-full max-w-xs"
+          type="text"
+          placeholder="จุดเเข็ง"
         />
     </div>
   </div>
@@ -247,28 +240,11 @@ export default function AddProduct() {
     </label>
     <div className="mt-2">
     <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
+          onChange={(e) => setDevalopment(e.target.value)}
+          value={devalopment}
           className="input input-bordered input-accent w-full max-w-xs"
           type="text"
-          placeholder="Product Category"
-        />
-    </div>
-  </div>
-  <div className="sm:col-span-3">
-    <label
-      htmlFor="last-name"
-      className="block text-sm font-medium leading-6 text-gray-900"
-    >
-      ข้อที่ควรปรับปรุงจุดอ่อน
-    </label>
-    <div className="mt-2">
-    <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
-          className="input input-bordered input-accent w-full max-w-xs"
-          type="text"
-          placeholder="Product Category"
+          placeholder="เเนวทางเสริมจุดเเข็ง"
         />
     </div>
   </div>
@@ -281,27 +257,23 @@ export default function AddProduct() {
     </label>
     <div className="mt-2">
     <input
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
+          onChange={(e) => setSuggestion(e.target.value)}
+          value={suggestion}
           className="input input-bordered input-accent w-full max-w-xs"
           type="text"
-          placeholder="Product Category"
+          placeholder="ข้อเสนอเเนะ"
         />
-      
-        
-    
-      
-        
     </div>
   </div>
 </div>
-
-
-
-        
-        <button type="submit" className="btn btn-primary w-full max-w-xs mx-20">
+        <div className="flex justify-center items-center mt-10">
+        <button
+         type="submit" 
+         className="btn btn-primary w-full max-w-xs mx-20 flex justify-center "
+      >
           Add Product
         </button>
+        </div>
       </form>
     </>
   );

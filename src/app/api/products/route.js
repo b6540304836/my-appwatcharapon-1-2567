@@ -10,9 +10,35 @@ export async function GET() {
 }
 
 export async function POST(request) {
-  const { name, image, price, category } = await request.json();
-  await connectMongoDB();
-  await Product.create({ name, image, price, category });
+  const {
+    name, 
+    project, 
+    imprementation, 
+    email, 
+    mobile, 
+    budget, 
+    year, 
+    evaluation, 
+    stregth, 
+    weak, 
+    development, 
+    suggestion,
+    } = await request.json();
+    await connectMongoDB();
+    await Product.create({ 
+    name, 
+    project, 
+    imprementation, 
+    email, 
+    mobile, 
+    budget, 
+    year, 
+    evaluation, 
+    stregth, 
+    weak, 
+    development, 
+    suggestion,
+    });
   return NextResponse.json({ message: "Product Created" }, { status: 201 });
 }
 
