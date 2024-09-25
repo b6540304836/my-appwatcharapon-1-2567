@@ -1,7 +1,10 @@
 //components\EditProductForm.jsx
+import * as React from "react";
+import Button from "@mui/material/Button";
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
-import Image from "next/image";
+import EditIcon from "@mui/icons-material/Edit";
+// import Image from "next/image";
 
 const getProducts = async () => {
   try {
@@ -21,7 +24,7 @@ const getProducts = async () => {
 
 export default async function ProductsList() {
   const { products } = await getProducts();
-  
+
   return (
     <div className="shadow-lg p-3 mb-5 bg-body rounded">
       <div className="overflow-x-auto">
@@ -30,21 +33,29 @@ export default async function ProductsList() {
             การติดตามและประเมินผลยุทธศาสตร์ชาติ 20 ปี
           </h1>
         </div>
-        <div className="text-right">
-          <Link className="btn btn-primary" href={"/addProduct"}>
-            Add Product
+        <div className="text-left ml-16">
+          <Link href={"/addProduct"}>
+            <Button
+              variant="contained"
+              color="success"
+              className="text-bold py-3 "
+              size="small"
+            >
+              Add Product
+            </Button>
           </Link>
         </div>
         <table className="table">
           <thead>
             <tr>
-              <th>
+              {/* <th>
                 <label>
                   <input type="checkbox" className="checkbox" />
                 </label>
-              </th>
+              </th> */}
+              <th>#</th>
               <th>ยุทธศาสตร์ชาติ</th>
-              <th>โครงงาร</th>
+              <th>โครงงาน</th>
               <th>หน่วยงานที่นำนโยบายไปปฏิบัติ</th>
               <th>อีเมล</th>
               <th>โทรศัพท์</th>
@@ -52,39 +63,24 @@ export default async function ProductsList() {
               <th>ปีงบประมาณ</th>
               <th>ผลประเมิน</th>
               <th>จุดอ่อน</th>
-              <th>จุดเเข็ง</th>
-              <th>เเนวทางเสริมจุดเเข็ง</th>
-              <th>ข้อเสนอเเนะ</th>
-              <th>Edit & Delete</th>
+              <th>จุดแข็ง</th>
+              <th>แนวทางเสริมจุดแข็ง</th>
+              <th>ข้อเสนอแนะ</th>
+              <th>
+                <div className="flex justify-center items-center font-bold">
+                  Edit & Delete
+                </div>
+              </th>
             </tr>
           </thead>
           <tbody>
-            {products.map((element) => (
+            {products.map((element, index) => (
               <tr className="hover" key={element._id}>
-                <th>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </th>
-                <td>
-                  <div className="flex items-center gap-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <Image
-                          src={element.image}
-                          alt={element.name}
-                          width={80}
-                          height={80}
-                          className="rounded-lg"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="font-bold">{element.name}</div>
-                    </div>
-                  </div>
-                </td>
-                <td>{element.imprementation}</td>
+                <th>{index + 1}</th>
+
+                <td>{element.name}</td>
+                <td>{element.projcet}</td>
+                <td>{element.implementation}</td>
                 <td>{element.email}</td>
                 <td>{element.mobile}</td>
                 <td>{element.budget}</td>
@@ -92,13 +88,23 @@ export default async function ProductsList() {
                 <td>{element.evaluation}</td>
                 <td>{element.weak}</td>
                 <td>{element.strength}</td>
-                <td>{element.devalopment}</td>
+                <td>{element.development}</td>
                 <td>{element.suggestion}</td>
+                {/* <td></td> */}
                 <th>
-                  <Link href={`/editProduct/${element._id}`}>
-                    <button className="btn btn-primary">Edit</button>
-                  </Link>
-                  <RemoveBtn id={element._id} />
+                  <div className="flex justify-center items-center">
+                    <Link href={`/editProduct/${element._id}`}>
+                      <Button
+                        variant="contained"
+                        color="success"
+                        className="font-bold px-6"
+                        size="small"
+                      >
+                        <EditIcon />
+                      </Button>
+                    </Link>
+                    <RemoveBtn id={element._id} />
+                  </div>
                 </th>
               </tr>
             ))}

@@ -1,5 +1,5 @@
 import React from "react";
-import AECRanking from "../components/AECRanking";
+import AECRanking from "../../components/AECRanking"
 
 export default function page() {
   return (

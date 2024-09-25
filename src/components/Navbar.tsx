@@ -29,7 +29,7 @@ export default function Navbar() {
                 <a href="/chatgpt">ChatGPT</a>
               </li>
               <li className="text-stone-600 hover:text-blue-600 hover:font-bold font-medium mx-4 my-1">
-                <a href="/productlist">การประเมินนโยบายสาธารณะ</a>
+                <a href="/productslist">การประเมินนโยบายสาธารณะ</a>
               </li>
               <li className="text-blue-600 hover:text-white hover:bg-blue-600 mx-4 my-1 border-2 border-blue-600 px-2 rounded-2xl ">
                 <a href="/contact">ติดต่อ</a>
@@ -80,10 +80,10 @@ export default function Navbar() {
         type="module"
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
       ></script>
-      <script
+      {/* <script
         nomodule
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-      ></script>
+      ></script> */}
     </div>
   );
 }
